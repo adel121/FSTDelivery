@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form class="jumbotron container form-group" action="add_bill" method="post">
+	<h2>Adding New Bill</h2>
+    {% csrf_token %}
+    {{ form }}
+    <hr>
+    <input type="submit" value="Add Bill">
+</form>
+{% endblock %}

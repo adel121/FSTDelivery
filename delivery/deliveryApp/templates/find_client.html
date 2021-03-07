@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load deliverytags %}
+<br><br>
+<form action="{% url 'find_client' %}" method="POST" class="container jumbotron">
+{% csrf_token %}
+{{form}}
+<br>
+<input type="submit" class="btn btn-primary" value="View Client">
+</form>
+
+{% endblock %}

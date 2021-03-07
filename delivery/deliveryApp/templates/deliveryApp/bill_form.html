@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content%}
+<div style="margin-top: 10px">
+<div style="align-content: center">
+<form method="post" class="container jumbotron" style="align-content: center">  
+	<h1 style="text-align: center">Edit Bill</h1>
+    {% csrf_token %}  
+    {{ form.as_p }}  
+    <input type="submit" class="btn btn-primary" value="Save Changes">  
+</form>
+</div>
+</div>
+<script>
+	$("#id_Id").addClass("form-control");
+	$("#id_Date").addClass("form-control");
+	$("#id_Date_In").addClass("form-control");
+	$("#id_Date_Sent").addClass("form-control");
+	//$("#id_Done").addClass("form-control");
+	$("#id_address").addClass("form-control");
+	$("#id_delivery_in").addClass("form-control");
+	$("#id_delivery_out").addClass("form-control");
+	$("#id_endClientName").addClass("form-control");
+	$("#id_endClientNumber").addClass("form-control");
+	$("#id_manager").addClass("form-control");
+	$("#id_client").addClass("form-control");
+	$("#id_Product_cost").addClass("form-control");
+	$("#id_Delivery_cost").addClass("form-control");
+	$("#id_Status").addClass("form-control");
+</script>
+{% endblock %}
+ <!--name="Id"
+ name="Date"
+ name="Date_In"
+ name="Date_Sent"
+ name="Done"
+ name="address"
+ name="delivery_in"
+ name="delivery_out"
+ name="endClientName"
+ name="endClientNumber"
+ name="manager"
+ name="client"
+ name="Product_cost"
+ name="Delivery_cost"
+ name="Status" id="id_Status">-->
